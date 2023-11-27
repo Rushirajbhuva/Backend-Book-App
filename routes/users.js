@@ -20,7 +20,7 @@ router.post("/signup", async (req, res) => {
   }
   if (
     !/^(?=.*?[0-9])(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[#!@%&]).{8,}$/g.test(password)
-  ) {
+  ) else{
     res.status(400).send({ message: "Password pattern does not match" });
     return;
   }
